@@ -1,0 +1,132 @@
+:root {
+    --bgColor: #050505;
+    --bgDark: rgba(0, 0, 0, 0.582);
+    --bgFontColor: #fff;
+    --bgSearchButton: #a5a5a5b8;
+}
+
+* {
+    color: var(--bgFontColor);
+    text-rendering: geometricPrecision;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:active,
+*:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background:  url("../Images/bg.gif") var(--bgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchbox-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.searchbox__container {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.searchbox__title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    margin-bottom: 1rem;
+}
+
+.searchbox__input {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--bgDark);
+    flex: 0 1 100%;
+}
+
+.searchbox__search {
+    background-color: var(--bgSearchButton);
+    padding: 0 0.8rem;
+    cursor: pointer;
+    flex: 0;
+    display: flex;
+    align-items: center;
+}
+
+.habbo-not-found,
+.habbo-found {
+    width: 64px;
+    height: 110px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.habbo-found{
+    transform: translateY(-14px);
+}
+
+.habbo-name {
+    color: black;
+    font-size: 18px;
+}
+
+.habbo-profile {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0.5rem;
+    margin-top: 5px;
+    display: flex;
+}
+
+.habbo-profile__details,
+.habbo-profile__badges {
+    flex: auto;
+}
+
+.habbo-profile__badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.badge__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px #0000001c;
+    border-radius: 8px;
+    margin: 1%;
+    padding: 0.3rem;
+}
+
+.habbo-profile__badge {
+    width: 35px;
+    height: 35px;
+}
+
+.habbo-motto,
+.habbo-date {
+    color: rgba(0, 0, 0, 0.568);
+    font-size: 12px;
+}
