@@ -3,7 +3,6 @@ import React from "react";
 function SearchBoxComponent({ onChangeName, habboName, profile }) {
     return (
         <div className="searchbox-container">
-            <h2 className="searchbox__title">Write your habbo name:</h2>
             <div className="searchbox__container">
                 <input
                     autoFocus

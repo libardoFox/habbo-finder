@@ -2,6 +2,7 @@ import React from "react";
 import HabboImage from "../../HabboImage/HabboImage";
 import HabboBadges from "../../HabboBadges/HabboBadges";
 import Loader from "../../Loader/Loader";
+import { Link } from "react-router-dom";
 
 const HabboDetailsComponent = (props) => {
     const { habboName, memberSince, motto, selectedBadges, loading, habboError } = props;
@@ -16,7 +17,7 @@ const HabboDetailsComponent = (props) => {
                     <HabboImage habboName={habboName} habboError={habboError}/>
                     <div className="habbo-profile__details">
                         <h2 className="habbo-name">
-                            {!habboError ? habboName : "Profile not found."}
+                            {!habboError ? <Link to={`/user/${habboName}`}>habboName </Link> : "Profile not found."}
                         </h2>
                         <p className="habbo-motto">
                             {!habboError
