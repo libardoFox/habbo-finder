@@ -17,7 +17,13 @@ const HabboDetailsComponent = (props) => {
                     <HabboImage habboName={habboName} habboError={habboError}/>
                     <div className="habbo-profile__details">
                         <h2 className="habbo-name">
-                            {!habboError ? <Link to={`/user/${habboName}`}>habboName </Link> : "Profile not found."}
+                            {!habboError ? 
+                                <Link to={`/user/${habboName}`} className="habbo-name__text">
+                                    {habboName}
+                                </Link>
+                                : 
+                                <span className="habbo-name__text">Profile not found.</span>
+                            }
                         </h2>
                         <p className="habbo-motto">
                             {!habboError

@@ -86,7 +86,7 @@ body {
     transform: translateY(-5px);
 }
 
-.habbo-name a {
+.habbo-name .habbo-name__text {
     text-decoration: none;
     display: block;
     color: var(--bgDark);
