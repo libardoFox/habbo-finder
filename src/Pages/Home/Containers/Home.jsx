@@ -1,9 +1,9 @@
 import React from "react";
 
 // components
-import SearchBox from "../../../Components/SearchBox/Containers/SearchBox";
+import HomeComponent from "../Components/HomeComponent";
 
 function Home() {
-    return <SearchBox />;
+  return <HomeComponent />;
 }
 export default Home;
