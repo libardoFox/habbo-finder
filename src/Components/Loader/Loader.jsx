@@ -1,13 +1,19 @@
 import React from "react";
-import "../../Styles/loader.css";
+import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 
 const Loader = () => {
-    return (
-        <div className="spinner">
-            <div className="double-bounce1"></div>
-            <div className="double-bounce2"></div>
-        </div>
-    );
+  return (
+    <SkeletonTheme color="#fff" highlightColor="#f0f0f0">
+      <p className="loader">
+        <p className="loader-circle">
+          <Skeleton circle={true} height={50} width={50} />
+        </p>
+        <p className="loader-bars">
+          <Skeleton count={3} />
+        </p>
+      </p>
+    </SkeletonTheme>
+  );
 };
 
 export default Loader;

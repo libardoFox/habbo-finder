@@ -35,6 +35,17 @@ body {
   overflow-x: hidden;
 }
 
+.loader{
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.loader-bars{
+  margin-left: 5px;
+  width: 100%;
+}
+
 .searchbox-container {
   position: relative;
   display: flex;

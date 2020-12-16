@@ -1,8 +1,7 @@
 import React from "react";
 import HabboImage from "../../HabboImage/HabboImage";
-import HabboBadges from "../../HabboBadges/HabboBadges";
-import Loader from "../../Loader/Loader";
-import { Link } from "react-router-dom";
+import HabboDescription from "./Components/HabboDescriptionComponent";
+import HabboBages from "./Components/HabboBadgesComponent";
 
 const HabboDetailsComponent = (props) => {
   const {
@@ -10,44 +9,17 @@ const HabboDetailsComponent = (props) => {
     memberSince,
     motto,
     selectedBadges,
-    loading,
+    uniqueId,
     habboError,
   } = props;
 
   return habboName ? (
     <div className="habbo-profile">
-      {loading ? (
-        <Loader />
-      ) : (
-        <>
-          <HabboImage habboName={habboName} habboError={habboError} />
-          <div className="habbo-profile__details">
-            <h2 className="habbo-name">
-              {!habboError ? (
-                <Link to={`/user/${habboName}`} className="habbo-name__text">
-                  {habboName}
-                </Link>
-              ) : (
-                <span className="habbo-name__text">Profile not found.</span>
-              )}
-            </h2>
-            <p className="habbo-motto">
-              {!habboError
-                ? motto
-                : "The profile you are looking for may be banned or the user has it private."}
-            </p>
-            <p className="habbo-date">
-              {memberSince && new Date(memberSince).toLocaleString()}
-            </p>
-          </div>
-
-          {selectedBadges?.length > 0 && (
-            <div className="habbo-profile__badges">
-              <HabboBadges badges={selectedBadges} />
-            </div>
-          )}
-        </>
-      )}
+      <HabboImage habboName={habboName} habboError={habboError} />
+      <HabboDescription
+        {...{ habboName, habboError, uniqueId, motto, memberSince }}
+      />
+      <HabboBages selectedBadges={selectedBadges} />
     </div>
   ) : null;
 };

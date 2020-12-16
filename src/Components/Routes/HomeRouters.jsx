@@ -5,14 +5,14 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "../../Pages/Home/Containers/Home";
 
 function HomeRouters() {
-    return (
-        <Router>
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route exact path="/perfil/:id" />
-            </Switch>
-        </Router>
-    );
+  return (
+    <Router>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/perfil/:id" />
+      </Switch>
+    </Router>
+  );
 }
 
 export default HomeRouters;

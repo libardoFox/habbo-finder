@@ -1,10 +1,15 @@
 import React from "react";
 import HabboDetailsComponent from "../Components/HabboDetailsComponent";
 
-const HabboDetails = ({ habboProfile, loading }) => {
-  const { habboName, memberSince, motto, selectedBadges } = habboProfile;
-  const habboError = habboProfile.hasOwnProperty("error");
-
+const HabboDetails = ({ habboProfile, isLoading }) => {
+  const {
+    habboName,
+    memberSince,
+    motto,
+    selectedBadges,
+    uniqueId,
+  } = habboProfile;
+  const habboError = !habboProfile.hasOwnProperty("uniqueId");
   return (
     <HabboDetailsComponent
       {...{
@@ -13,7 +18,8 @@ const HabboDetails = ({ habboProfile, loading }) => {
         memberSince,
         motto,
         selectedBadges,
-        loading,
+        uniqueId,
+        isLoading,
       }}
     />
   );
