@@ -1,12 +1,11 @@
-:root {
-  --bgColor: #eee;
-  --bgDark: #000000cc;
-  --bgFontColor: #fff;
-  --bgSearchButton: #a5a5a5b8;
-}
+$w:#fff;
+$bgColor: #eee;
+$bgDark: #000000cc;
+$bgFontColor: #000000cc;;
+$bgSearchButton: #a5a5a5b8;
 
 * {
-  color: var(--bgFontColor);
+  color: $bgFontColor;
   text-rendering: geometricPrecision;
   margin-block-end: 0;
   margin-block-start: 0;
@@ -28,20 +27,20 @@ body {
 }
 
 body {
-  background: var(--bgColor);
+  background: $bgColor;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
 }
 
-.loader{
+.loader {
   display: flex;
   align-items: center;
   margin-top: 1rem;
 }
 
-.loader-bars{
+.loader-bars {
   margin-left: 5px;
   width: 100%;
 }
@@ -64,14 +63,14 @@ body {
 .searchbox__input {
   display: block;
   padding: 1rem 2rem;
-  color: var(--bgDark);
+  color: $bgDark;
   flex: 0 1 100%;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
 .searchbox__search {
-  background: var(--bgFontColor);
+  background: $w;
   padding: 0 0.8rem;
   cursor: pointer;
   flex: 0;
@@ -82,7 +81,7 @@ body {
 }
 
 .searchbox__search .fa-search {
-  color: var(--bgDark);
+  color: $bgDark;
 }
 
 .habbo-not-found,
@@ -100,7 +99,7 @@ body {
 .habbo-name .habbo-name__text {
   text-decoration: none;
   display: block;
-  color: var(--bgDark);
+  color: $bgDark;
   font-size: 18px;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -114,19 +113,19 @@ body {
   margin-top: 5px;
   display: flex;
   box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2);
-}
 
-.habbo-profile__details,
-.habbo-profile__badges {
-  flex: auto;
-}
+  .habbo-profile__details,
+  .habbo-profile__badges {
+    flex: auto;
+  }
 
-.habbo-profile__badges {
-  display: flex;
-  width: auto;
-  max-width: 145px;
-  flex-wrap: wrap;
-  align-items: center;
+  .habbo-profile__badges {
+    display: flex;
+    width: auto;
+    max-width: 145px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 .badge__container {
@@ -156,6 +155,7 @@ body {
 .wave-circle {
   position: absolute;
 }
+
 .wave {
   bottom: 0;
   left: 0;

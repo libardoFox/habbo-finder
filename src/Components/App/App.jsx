@@ -1,12 +1,6 @@
 import React from "react";
-
-// components
 import HomeRouters from "../Routes/HomeRouters";
-
-//css
-import "../../Styles/normalize.css";
-import "../../Styles/fonts.css";
-import "../../Styles/global.css";
+import "../../Styles/styles.scss";
 
 function App() {
     return <HomeRouters />;
